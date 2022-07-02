@@ -1,0 +1,41 @@
+.card{
+    width: 100%;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        max-width: 800px;
+        gap: 5rem;
+        margin: 0 auto;
+
+        > div:first-child {
+            img {
+                width: 22rem;
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 576px) {  
+    .card {
+
+        .container {
+            display: grid;
+            grid-template-columns: auto;
+            gap: 0;
+            > div:first-child {
+                img {
+                    width: 100%;
+                }
+            }
+            
+            > div:last-child {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
